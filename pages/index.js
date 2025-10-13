@@ -3,6 +3,7 @@ console.log(uuidv4());
 
 import { initialTodos, validationConfig } from "../utils/constants.js";
 import Todo from "../components/Todo.js";
+import FormValidator from "../components/FormValidation.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
@@ -56,3 +57,6 @@ initialTodos.forEach((item) => {
   const todoElement = todo.getView();
   todosList.append(todoElement);
 });
+
+const newFormValidator = new FormValidator(validationConfig, addTodoForm);
+const formElement = newFormValidator.enableValidation();
