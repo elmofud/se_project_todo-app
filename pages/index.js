@@ -59,4 +59,4 @@ initialTodos.forEach((item) => {
 });
 
 const newFormValidator = new FormValidator(validationConfig, addTodoForm);
-const formElement = newFormValidator.enableValidation();
+newFormValidator.enableValidation();
