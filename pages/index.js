@@ -3,7 +3,7 @@ console.log(uuidv4());
 
 import { initialTodos, validationConfig } from "../utils/constants.js";
 import Todo from "../components/Todo.js";
-import FormValidator from "../components/FormValidation.js";
+import FormValidator from "../components/FormValidator.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
@@ -14,19 +14,16 @@ const todosList = document.querySelector(".todos__list");
 
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
+  addTodoForm.reset();
 };
 
 const closeModal = (modal) => {
   modal.classList.remove("popup_visible");
 };
-/*const generateTodo = (data) => {
-  const todo = new Todo(data, "#todo-template");
-  const todoElement = todo.getView();
-  return todoElement;
-};*/
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
+  newFormValidator.resetValidation();
 });
 
 addTodoCloseBtn.addEventListener("click", () => {
