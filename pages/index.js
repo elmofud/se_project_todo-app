@@ -47,6 +47,7 @@ addTodoForm.addEventListener("submit", (evt) => {
   todosList.append(todoElement);
 
   closeModal(addTodoPopup);
+  addTodoForm.reset();
 });
 
 initialTodos.forEach((item) => {
