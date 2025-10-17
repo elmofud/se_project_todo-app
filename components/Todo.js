@@ -14,7 +14,7 @@ class Todo {
     });
   }
 
-  _generateChecboxEl() {
+  _generateCheckboxEl() {
     this.todoCheckboxEl = this.todoElement.querySelector(".todo__completed");
     this.todoLabel = this.todoElement.querySelector(".todo__label");
     this.todoCheckboxEl.checked = this._data.completed;
