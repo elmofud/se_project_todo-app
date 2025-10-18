@@ -85,4 +85,4 @@ The Todo App is a user-friendly application that allows users to create a to-do 
 
 This project is deployed on GitHub Pages:
 
-[(https://github.com/elmofud/se_project_todo-app.git)]
+[Your site is live at] https://elmofud.github.io/se_project_todo-app/
