@@ -28,7 +28,58 @@ The Todo App is a user-friendly application that allows users to create a to-do 
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+### HTML5
+
+- Sematic markup and form elements
+- Dynamic content redering
+
+### CSS
+
+- Resposive design and modern style
+- Interactive UI components
+
+### JavaScript ES6+
+
+- Object = orented programing with classes
+- Event handling and DOM manipulation
+- Form validation and data management
+
+### Application Navigation Flow
+
+**1. Opening the Add Todo Module**
+
+<img src="screenShotReadMe/openAddTodoM.png" alt="Open Add Todo Module" width="650">
+
+<br>
+<br>
+
+**2. Adding Todo Form**
+
+<img src="screenShotReadMe/addTodoF.png" alt="add Todo Form" width="650">
+
+<br>
+<br>
+
+**3. Adding Date Module**
+
+<img src="screenShotReadMe/calenderDatePickers.png" alt="add Date Module" width="650">
+
+<br>
+<br>
+
+**4. Checkbox Todo Feature**
+
+<img src="screenShotReadMe/checkboxTodoS.png" alt="checkbox Todo" width="650">
+
+<br>
+<br>
+
+**5. Delete Todo Function**
+
+<img src="screenShotReadMe/deleteTodoF.png" alt="Delete Todo" width="650">
+
+<br>
+<br>
 
 ## Deployment
 

@@ -41,7 +41,7 @@ class Todo {
       })}`;
     }
 
-    this._generateChecboxEl();
+    this._generateCheckboxEl();
     this._setEventListener();
     return this.todoElement;
   }
