@@ -45,6 +45,13 @@ const renderTodo = (todoData) => {
   section.addItem(todoElement);
 };
 
+function handleEscapeClose(evt) {
+  if (evt.key === "Escape") {
+    //find the currenly opened modal
+    //and close
+  }
+}
+
 addTodoButton.addEventListener("click", () => {
   //openModal(addTodoPopupEl);
   addTodoPopup.open();
@@ -55,7 +62,7 @@ addTodoButton.addEventListener("click", () => {
 //addTodoPopup.close();
 //});
 
-addTodoForm.addEventListener("submit", (evt) => {
+/*addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   const name = evt.target.name.value;
   const dateInput = evt.target.date.value;
@@ -72,7 +79,7 @@ addTodoForm.addEventListener("submit", (evt) => {
   addTodoPopup.close();
   addTodoForm.reset();
   newFormValidator.resetValidation();
-});
+});*/
 section.renderItems();
 /*initialTodos.forEach((item) => {
   renderTodo(item);
