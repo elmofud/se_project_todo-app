@@ -16,6 +16,7 @@ const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: () => {},
 });
+addTodoPopup.setEventListeners();
 
 //call section instance's renderItems method
 const section = new Section({
@@ -49,10 +50,10 @@ addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-addTodoCloseBtn.addEventListener("click", () => {
-  //closeModal(addTodoPopupEl);
-  addTodoPopup.close();
-});
+//addTodoCloseBtn.addEventListener("click", () => {
+//closeModal(addTodoPopupEl);
+//addTodoPopup.close();
+//});
 
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
