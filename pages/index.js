@@ -14,7 +14,9 @@ const todoList = document.querySelector(".todos__list");
 
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
-  handleFormSubmit: () => {},
+  handleFormSubmit: () => {
+    console.log("bitme");
+  },
 });
 addTodoPopup.setEventListeners();
 
