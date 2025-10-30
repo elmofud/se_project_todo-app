@@ -4,6 +4,7 @@ import Todo from "../components/Todo.js";
 import FormValidator from "../components/FormValidator.js";
 import Section from "../components/Section.js";
 import PopupWithForm from "../components/PopupWithForm.js";
+import TodoCounter from "../components/todoCounter.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
@@ -15,7 +16,6 @@ const todoList = document.querySelector(".todos__list");
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (inputValues) => {
-    // Create a date object and adjust for timezone
     const { name, date: inputDate } = inputValues;
     const date = new Date(inputDate);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
@@ -24,7 +24,6 @@ const addTodoPopup = new PopupWithForm({
     const values = { name, date, id };
     renderTodo(values);
 
-    // addTodoPopupEl.close();
     addTodoPopup.close();
     addTodoForm.reset();
     newFormValidator.resetValidation();
@@ -33,22 +32,15 @@ const addTodoPopup = new PopupWithForm({
 
 addTodoPopup.setEventListeners();
 
-//call section instance's renderItems method
 const section = new Section({
   items: initialTodos,
   renderer: (todoData) => {
     const todo = new Todo(todoData, "#todo-template");
     const todoElement = todo.getView();
     return todoElement;
-    //section.addItem(todoElement);
   },
   containerSelector: ".todos__list",
 });
-
-/*const openModal = (modal) => {
-  modal.classList.add("popup_visible");
-  addTodoForm.reset();
-};*/
 
 const renderTodo = (todoData) => {
   const todo = new Todo(todoData, "#todo-template");
@@ -60,33 +52,7 @@ addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-//addTodoCloseBtn.addEventListener("click", () => {
-//closeModal(addTodoPopupEl);
-//addTodoPopup.close();
-//});
-
-/*addTodoForm.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  const name = evt.target.name.value;
-  const dateInput = evt.target.date.value;
-
-  // Create a date object and adjust for timezone
-  const date = new Date(dateInput);
-  date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-
-  const id = uuidv4();
-  const values = { name, date, id };
-  renderTodo(values);
-
-  //closeModal(addTodoPopupEl);
-  addTodoPopup.close();
-  addTodoForm.reset();
-  newFormValidator.resetValidation();
-});*/
 section.renderItems();
-/*initialTodos.forEach((item) => {
-  renderTodo(item);
-});*/
 
 const newFormValidator = new FormValidator(validationConfig, addTodoForm);
 newFormValidator.enableValidation();
