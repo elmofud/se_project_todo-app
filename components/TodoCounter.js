@@ -1,14 +1,13 @@
 import { initialTodos } from "../utils/constants.js";
 
-const counterSlector = document.querySelector(".counter-text");
-
 export default class TodoCounter {
   // todos should be the array of initial todos
   // selector is the selector for the counter text element
   constructor(todos, selector) {
     this._element = document.querySelector(selector); // select the appropriate element
-    this._completed = 0; // number of completed todos
-    this._total = 0; // the total number of todos
+    this._completed = todos.filter((todo) => todo.completed).length; // number of completed todos
+    this._total = todos.length;
+    this._update; // the total number of todos
   }
   // Call this when a checkbox is clicked, and when a completed
   // to-do is deleted.
