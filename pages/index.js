@@ -17,12 +17,17 @@ const addTodoPopup = new PopupWithForm({
   handleFormSubmit: (inputValues) => {
     // Create a date object and adjust for timezone
     const { name, date: inputDate } = inputValues;
-    const date = new Date(inputDate.value);
+    const date = new Date(inputDate);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
     const id = uuidv4();
     const values = { name, date, id };
     renderTodo(values);
+
+    // addTodoPopupEl.close();
+    addTodoPopup.close();
+    addTodoForm.reset();
+    newFormValidator.resetValidation();
   },
 });
 
