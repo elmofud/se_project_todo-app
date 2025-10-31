@@ -8,7 +8,7 @@ export default class Section {
   renderItems() {
     this._items.forEach((item) => {
       const todoElement = this._renderer(item);
-      this.addItem(todoElement); //call the renderer and pass it to the item ans argument
+      this.addItem(todoElement);
     });
   }
 

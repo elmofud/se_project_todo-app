@@ -1,12 +1,11 @@
-import TodoCounter from "./TodoCounter.js";
-
-class Todo {
+export default class Todo {
   constructor(data, selector, handleTodoCheckbox, handleTodoDelete) {
     this._data = data;
     this._templateElement = document.querySelector(selector);
     this._handleTodoCheckbox = handleTodoCheckbox;
     this._handleTodoDelete = handleTodoDelete;
   }
+
   _setEventListener() {
     this.todoDeleteBtn.addEventListener("click", () => {
       this._handleTodoDelete(this._data.completed);
@@ -51,5 +50,3 @@ class Todo {
     return this.todoElement;
   }
 }
-
-export default Todo;
