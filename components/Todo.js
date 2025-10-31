@@ -1,15 +1,19 @@
+import TodoCounter from "./TodoCounter.js";
+
 class Todo {
-  constructor(data, selector) {
+  constructor(data, selector, handleTodoCheckbox) {
     this._data = data;
     this._templateElement = document.querySelector(selector);
+    this._handleTodoCheckbox = handleTodoCheckbox;
   }
   _setEventListener() {
     this.todoDeleteBtn.addEventListener("click", () => {
       this.todoElement.remove();
     });
 
-    this.todoCheckboxEl.addEventListener("change", () => {
+    this.todoCheckboxEl.addEventListener("change", (evt) => {
       this._data.completed = !this._data.completed;
+      this._handleTodoCheckbox(evt.target.checked);
     });
   }
 
