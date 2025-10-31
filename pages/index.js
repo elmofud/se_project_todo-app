@@ -63,6 +63,7 @@ const renderTodo = (todoData) => {
     handleTodoCheckbox,
     handleTodoDelete
   );
+
   const todoElement = todo.getView();
   section.addItem(todoElement);
   todoCounter.updateTotal(true);
