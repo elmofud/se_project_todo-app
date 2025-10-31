@@ -17,6 +17,13 @@ function handleTodoCheckbox(completed) {
   todoCounter.updateCompleted(completed);
 }
 
+function handleTodoDelete(completed) {
+  if (completed) {
+    todoCounter.updateCompleted(false);
+  }
+  todoCounter.updateTotal(false);
+}
+
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (inputValues) => {
@@ -39,7 +46,12 @@ addTodoPopup.setEventListeners();
 const section = new Section({
   items: initialTodos,
   renderer: (todoData) => {
-    const todo = new Todo(todoData, "#todo-template", handleTodoCheckbox);
+    const todo = new Todo(
+      todoData,
+      "#todo-template",
+      handleTodoCheckbox,
+      handleTodoDelete
+    );
     const todoElement = todo.getView();
     return todoElement;
   },
@@ -47,9 +59,15 @@ const section = new Section({
 });
 
 const renderTodo = (todoData) => {
-  const todo = new Todo(todoData, "#todo-template", handleTodoCheckbox);
+  const todo = new Todo(
+    todoData,
+    "#todo-template",
+    handleTodoCheckbox,
+    handleTodoDelete
+  );
   const todoElement = todo.getView();
   section.addItem(todoElement);
+  todoCounter.updateTotal(true);
 };
 
 addTodoButton.addEventListener("click", () => {
