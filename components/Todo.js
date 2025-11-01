@@ -46,7 +46,7 @@ export default class Todo {
     }
 
     this._generateCheckboxEl();
-    this._setEventListener();
+    this._setEventListeners();
     return this.todoElement;
   }
 }
