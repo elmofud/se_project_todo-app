@@ -6,7 +6,7 @@ export default class Todo {
     this._handleTodoDelete = handleTodoDelete;
   }
 
-  _setEventListener() {
+  _setEventListeners() {
     this.todoDeleteBtn.addEventListener("click", () => {
       this._handleTodoDelete(this._data.completed);
       this.todoElement.remove();
