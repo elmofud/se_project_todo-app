@@ -39,7 +39,7 @@ const addTodoPopup = new PopupWithForm({
   },
 });
 
-addTodoPopup.setEventListeners();
+addTodoPopup.sfotEventListeners();
 
 const section = new Section({
   items: initialTodos,

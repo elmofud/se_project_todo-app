@@ -1,6 +1,6 @@
 # Simple Todo App
 
-The Todo App is a user-friendly application that allows users to create a to-do list with the option of adding due dates. The check boxes are used to keep track of the completion of each task. For the add button, the user can add new tasks to the list. Each task has its own delete button to delete the unwanted task from the list.
+The Todo App is a user-friendly application that lets users create a to-do list with the option to add due dates. The checkboxes are used to track the completion of each task. The add button enables the user to add new functions to the list. Each task has its own delete button to remove it from the list.
 
 ## Functionality
 
