@@ -81,11 +81,13 @@ The Todo App is a user-friendly application that lets users create a to-do list 
 <br>
 <br>
 
-## demo youtube video##
-This the video showcase To - Do app: https://youtu.be/2xQOMwqI-6I
-
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-[Your site is live at] https://elmofud.github.io/se_project_todo-app/
+[site is live at] https://elmofud.github.io/se_project_todo-app/
+
+This project video showcase To - Do app:
+
+[video is desplayed at] https://youtu.be/2xQOMwqI-6I
+
